@@ -13,18 +13,7 @@ def get_emma_password(HOST, PORT, angela_password):
     stdin, stdout, stderr = ssh.exec_command("sed -n '4069p' findme.txt ")
     stdout = stdout.readlines()
     emma_password = "".join(stdout).split()[0]
-    p.status(emma_password)
-
-    # Get flag
-    ssh = paramiko.SSHClient()
-    ssh.load_system_host_keys()
-    ssh.connect(hostname=HOST, username="emma", password=emma_password, port=PORT)
-
-    stdin, stdout, stderr = ssh.exec_command("cat flagz.txt")
-    stdout = stdout.readlines()
-    flag = "".join(stdout).split()[0]
-    p.success(emma_password + " : " + flag)
-    ssh.close()
+    p.success(emma_password)
 
     return emma_password
 
