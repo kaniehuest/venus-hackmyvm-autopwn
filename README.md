@@ -2,7 +2,7 @@
 
 A collection of scripts to automate the collection of flags and passwords for the venus lab.
 
-Link for the lab [Venus](https://hackmyvm.eu/venus)
+Link for the lab [Venus](https://hackmyvm.eu/venus).
 
 # Requirements
 
@@ -24,3 +24,5 @@ Run the main script.
 ```bash
 python3 main.py
 ```
+
+![](/images/venus.gif)
